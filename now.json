@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "name": "nuxt-express",
+    "builds": [
+        { 
+            "src":"nuxt.config.js",
+            "use": "@nuxtjs/now-builder",
+            "config": {
+                "serverFiles": [
+                    "server-middleware/**"
+                ]
+            }
+        }
+    ],
+    "routes": [
+        { "src": "/_nuxt/.+", "headers": { "Cache-Control": "max-age=3155700" } },
+        { "src": "/images/(.*)", "dest": "/images" },
+        { "src": "/(.*)", "dest": "/" }
+    ]
+}
