@@ -15,54 +15,27 @@
       </div>
       <v-card>
         <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
+          Nuxt.js & Express <span class="font-weight-thin">&nbsp;&nbsp;Server-Side Rendering example</span> 
         </v-card-title>
         <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>
-            For more information on Vuetify, check out the <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-            >
-              documentation
-            </a>.
-          </p>
-          <p>
-            If you have questions, please join the official <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              title="chat"
-            >
-              discord
-            </a>.
-          </p>
-          <p>
-            Find a bug? Report it on the github <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              title="contribute"
-            >
-              issue board
-            </a>.
-          </p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
+          <div>
+              <span>Serverless</span>
+              <a href="https://zeit.co/" target="_blank">
+                <v-img src="images/zeit-white-full-logo.svg" width="100px"></v-img>
+              </a>
           </div>
-          <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-          >
-            Nuxt Documentation
-          </a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-          >
-            Nuxt GitHub
-          </a>
+          <div class="mt-5">
+                <span>Main feature</span>
+            <ul>
+                <li class="font-weight-thin">Client data calls through express server middleware api</li>
+            </ul>           
+          </div>
+          <div class="mt-5">
+              <span>Repository</span>
+              <a href="">
+              <v-img src="images/github.png" width="30px"></v-img>
+              </a>
+          </div>
         </v-card-text>
         <v-card-actions>
           <v-spacer />
@@ -77,7 +50,7 @@
             @click="getinfo"
           >
             get info
-          </v-btn>
+          </v-btn>          
         </v-card-actions>
       </v-card>
     </v-flex>
@@ -93,9 +66,16 @@ export default {
     Logo,
     VuetifyLogo
   },
+  data: () => ({
+      
+  }),
   methods: {
       getinfo() {
           this.$axios.get('/api/lookup/909253')
+            .then(result => console.log(result.data))
+      },
+      search() {
+          this.$axios.get('/api/search/jack johnson')
             .then(result => console.log(result.data))
       }
   }
