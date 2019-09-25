@@ -7,7 +7,10 @@
       app
     >
       <div class="text-center pa-3">
-        <v-icon large>mdi-nuxt</v-icon>
+        <v-btn 
+        icon
+        target="_blank"
+        href="https://nuxtjs.org/"><v-icon large>mdi-nuxt</v-icon></v-btn>
       </div>
       <v-list>
         <template v-for="(item, i) in items">
@@ -39,8 +42,11 @@
         class="text-center font-weight-light"
         style="width:100%;" 
         v-text="title" /> 
-      <v-spacer></v-spacer>
-      <v-btn icon><v-icon>mdi-github-circle</v-icon></v-btn>
+      <v-spacer></v-spacer>    
+      <v-btn 
+        icon
+        target="_blank"
+        href="https://github.com/webknet/nuxt-express"><v-icon>mdi-github-circle</v-icon></v-btn>
     </v-app-bar>
     <v-content>
       <v-container>

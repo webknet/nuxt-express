@@ -7,6 +7,7 @@ module.exports = {
         return axios.get(`${dataUrl}/lookup?id=${id}`)
     },
     search(value) {
-        return axios.get(`${dataUrl}/search?${value}&limit=100`)
+        //return axios.get(`${dataUrl}/search?${value}&limit=100`)
+        return axios.get(`${dataUrl}/search?${value}`)
     }
 }

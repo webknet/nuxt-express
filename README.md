@@ -1,6 +1,9 @@
 # nuxt-express
 
-> Nuxt Express
+> Draft app using nuxt/express and serverless Zeit-now
+
+## Demo
+https://nuxt-express.webknet.now.sh/
 
 ## Build Setup
 

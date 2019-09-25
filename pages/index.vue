@@ -9,16 +9,22 @@
       sm8
       md6
     >
-      <div class="text-center">
+      <div class="text-center ma-5">
         <logo />
         <vuetify-logo />
       </div>
       <v-card>
         <v-card-title class="headline">
-          Nuxt.js & Express <span class="font-weight-thin">&nbsp;&nbsp;Server-Side Rendering example</span> 
+          Nuxt.js & Express <span class="font-weight-thin">&nbsp;&nbsp;Server-Side Rendering ...draft example</span> 
         </v-card-title>
-        <v-card-text>
-          <div>
+        <v-card-text class="pa-5">
+          <div class="pt-5">
+            <span>Nuxt js</span><br>
+            <a href="https://nuxtjs.org/" target="_blank">
+              <v-icon large>mdi-nuxt</v-icon>
+            </a>            
+          </div>
+          <div  class="mt-5">
               <span>Serverless</span>
               <a href="https://zeit.co/" target="_blank">
                 <v-img src="images/zeit-white-full-logo.svg" width="100px"></v-img>
@@ -32,8 +38,8 @@
           </div>
           <div class="mt-5">
               <span>Repository</span>
-              <a href="">
-              <v-img src="images/github.png" width="30px"></v-img>
+              <a  target="_blank" href="https://github.com/webknet/nuxt-express">
+                <v-img src="images/github.png" width="30px"></v-img>
               </a>
           </div>
         </v-card-text>
@@ -46,11 +52,11 @@
           >
             Continue
           </v-btn>
-          <v-btn
+          <!-- <v-btn
             @click="getinfo"
           >
             get info
-          </v-btn>          
+          </v-btn>           -->
         </v-card-actions>
       </v-card>
     </v-flex>
