@@ -9,11 +9,9 @@ router.get('/search/:term/:kind', (req, res, next) => {
     // Middelware search
     let key = '__express__' + req.originalUrl || req.url
     let cache = searchCache.get(key)
-    if (cache) {
-        res.send(cache)        
-    } else {
-        next()
-    }
+    
+    cache ? res.send(cache) : next()
+
 })
 router.get('/lookup/:id', (req, res) => {
     data.lookup(req.params.id).then(result => {
