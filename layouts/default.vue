@@ -70,34 +70,12 @@ export default {
       drawer: true,
       fixed: false,
       items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
-        },
-        {
-            subheader: true,
-            title: 'Express API ex:'
-        },
-        {
-          icon: 'mdi-music',
-          title: 'Music search',
-          to: '/music'
-        },
-        {
-          icon: 'mdi-movie-filter',
-          title: 'Movies search',
-          to: '/movies'
-        },
-        {
-          subheader:true,
-          title: 'Static pages'
-        },
-        {
-          icon:'mdi-grain',
-          title: 'Inspire',
-          to: '/inspire'
-        }
+        { icon: 'mdi-apps',  title: 'Welcome', to: '/' },
+        { subheader: true, title: 'Express API ex:' },
+        { icon: 'mdi-music', title: 'Music search', to: '/music' },
+        { icon: 'mdi-movie-filter', title: 'Movies search', to: '/movies' },
+        { subheader:true, title: 'Static pages' },
+        { icon:'mdi-grain', title: 'Inspire', to: '/inspire'  }
       ],
       title: 'Nuxt & express app'
     }

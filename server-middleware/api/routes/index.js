@@ -22,14 +22,15 @@ router.get('/lookup/:id', (req, res) => {
 router.get('/search/:term/:kind', (req, res) => {
     let key = '__express__' + req.originalUrl || req.url
 
-    data.search(req.params.term).then(result => {        
-        const data = result.data.results.filter(i => i.kind == req.params.kind )
-        const value = { data, resultCount: data.length, cache: true }
-        
-        searchCache.put(key, value, 180000)
-        res.send({ data, resultCount: data.length})
-    })
-})
+    data.search(req.params.term)
+        .then(result => {        
+            const data = result.data.results.filter(i => i.kind == req.params.kind )
+            const value = { data, resultCount: data.length, cache: true }
+            
+            searchCache.put(key, value, 180000)
+            res.send({ data, resultCount: data.length})
+        })
+}) 
 
 
 module.exports = router
